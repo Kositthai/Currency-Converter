@@ -1,10 +1,15 @@
-import CurrencySelector from "./Component/CurrencySelector";
-import ConversionResult from "./Component/ConvensionResult";
+import CurrencyAmount from "./component/CurrencyAmount";
+import SelectCurrencyFrom from "./component/SelectCurrencyFrom";
+import SelectCurrencyTo from "./component/SelectCurrencyTo";
+import ConversionResult from "./component/ConvensionResult";
 
 function App() {
   return (
     <div className="App">
-      <CurrencySelector />
+      <h1>Currency Converter</h1>
+      <CurrencyAmount />
+      <SelectCurrencyFrom />
+      <SelectCurrencyTo />
       <ConversionResult />
     </div>
   );

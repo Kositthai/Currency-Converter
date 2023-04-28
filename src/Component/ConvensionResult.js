@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { CurrencyContext } from "./CurrencyContext";
+import { CurrencyContext } from "../context/CurrencyContext";
 
-function ConversionResult() {
-    const { to, from,  amount, fetchState} = useContext(CurrencyContext);
+export default function ConversionResult() {
+  const { to, from, amount, fetchState } = useContext(CurrencyContext);
 
   const calcurateExchangeRate = () => {
     const convertExchangeRate = fetchState.response[to];
@@ -17,5 +17,3 @@ function ConversionResult() {
     </div>
   );
 }
-
-export default ConversionResult;
