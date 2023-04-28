@@ -2,36 +2,38 @@ import { createContext, useState, useEffect } from "react";
 export const CurrencyContext = createContext();
 
 export default function CurrencyProvider({ children }) {
-  const [to, setTo] = useState("EUR");
+  
   const [from, setFrom] = useState("DKK");
+  const [to, setTo] = useState("EUR");
   const [amount, setAmount] = useState(1);
-  const [exchangeRate, setExchangeRate] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsEror] = useState();
+  const [fetchState, setFetchState] = useState({
+    loading: false,
+    response: [],
+    error: null,
+  });
 
-  // get all data
+  
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true);
+      setFetchState((previous) => ({...previous, loading: true}));
       try {
         const response = await fetch(
           `https://v6.exchangerate-api.com/v6/ae587b0565b1833a078ba9c9/latest/${from}`
         );
         const data = await response.json();
-        setExchangeRate(data.conversion_rates);
-        setIsLoading(false);
+        setFetchState((previous) => ({...previous, response: data.conversion_rates}));
+
         if (!response.ok) {
           throw new Error(JSON.stringify(data));
         }
+
       } catch (error) {
         console.log(error);
-        alert("something went wrong in internal operation, Try again later");
-      } finally {
-        setIsLoading(false);
+        setFetchState({ loading: false, response: [], error: error });
       }
     };
     fetchData();
-  }, [from, to]);
+  }, [from]);
 
   const curencyStates = {
     to,
@@ -40,8 +42,8 @@ export default function CurrencyProvider({ children }) {
     setFrom,
     amount,
     setAmount,
-    exchangeRate,
-    isLoading,
+    setFetchState, 
+    fetchState
   };
 
   return (

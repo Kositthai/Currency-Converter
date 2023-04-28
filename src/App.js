@@ -1,9 +1,11 @@
-import Convert from "./Component/Convert.js";
+import CurrencySelector from "./Component/CurrencySelector";
+import ConversionResult from "./Component/ConvensionResult";
 
 function App() {
   return (
     <div className="App">
-      <Convert />
+      <CurrencySelector />
+      <ConversionResult />
     </div>
   );
 }
