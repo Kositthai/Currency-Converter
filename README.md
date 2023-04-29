@@ -22,9 +22,6 @@ ExchangeRate-API was chosen as the data source for the app because it meets the 
 ## Validation
 The app validates user input for the amount field using regular expressions. If the input is invalid, an error message is displayed to the user.
 
-## Chellenge
-
-I have a bit difficult time to combine "react select" package with data that I gto from API to create options in Select but I handle it by mapping the list and make it as an object and return it 
 
 ## Challenges
 
@@ -33,18 +30,11 @@ One challenge faced during development was integrating the React Select package 
 ## How to use 
 To use this currency converter app, you will need to follow these steps:
 
-git clone https://github.com/your-username/currency-converter.git
-
-cd currency-converter
-
-touch .env
-
-Go to https://www.exchangerate-api.com/ and sign up for a free API key.
-
-REACT_APP_API_KEY=your-api-key-here
-
-Add your API key to the .env file like this:
-
-npm install
-
-npm start with localhots: 3000
+1. git clone https://github.com/your-username/currency-converter.git
+2. cd currency-converter
+3. touch .env
+4. Go to https://www.exchangerate-api.com/ and sign up for a free API key.
+5. REACT_APP_API_KEY=your-api-key-here
+6. Add your API key to the .env file like this:
+7.npm install
+8.npm start with localhots: 3000
