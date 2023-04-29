@@ -1,0 +1,50 @@
+body {
+  background: rgb(33, 12, 102);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; 
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.App-Content-Wrapper {
+  margin-top: 8em;
+  width: 100%;
+  text-align: center;
+}
+
+.App-Contents {
+  display: inline-block;
+  background: whitesmoke;
+  width: 50%;
+  height: 18em;
+ padding-top: 5em;
+  border-radius: 1em;
+}
+
+.Currency-Form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Error-Text {
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 5em;
+}
+
+.fa-spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10em;
+  height: 100vh;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: rgb(249, 244, 244);
+}

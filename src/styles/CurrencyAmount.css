@@ -1,0 +1,12 @@
+.Amount-Label {
+    color: rgb(47, 87, 217);
+    margin-right: 1em;
+}
+
+.Amount-Input {
+    height: 2.5em;
+    border-radius: .3em;
+    border: 1px gray solid;
+    outline: none; 
+    text-indent: 1em;
+}

@@ -1,0 +1,14 @@
+.SelectCurrencyTo {
+  display: flex;
+  align-items: center;
+}
+
+.To-Label {
+  text-align: center;
+  color: rgb(47, 87, 217);
+  margin-right: 1em;
+}
+
+.To-Selector {
+    width: 12em;
+}
